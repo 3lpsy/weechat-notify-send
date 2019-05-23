@@ -15,6 +15,12 @@ help:
 	@echo "  tests          - run tests"
 	@echo "  tests-coverage - obtain test coverage"
 
+install:
+	@rm ${HOME}/.weechat/python/autoload/notify_send.py || true
+	@rm ${HOME}/.weechat/python/notify_send.py  || true
+	@cp notify_send.py ${HOME}/.weechat/python/
+	@ln -s ${HOME}/.weechat/python/notify_send.py ${HOME}/.weechat/python/autoload/notify_send.py
+
 clean:
 	@find . -name '__pycache__' -exec rm -rf {} +
 	@find . -name '*.py[co]' -exec rm -f {} +
