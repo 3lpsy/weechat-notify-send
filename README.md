@@ -1,3 +1,7 @@
+### Status: Broken
+
+Unforunately weechat hangs when import gi.repository.Notify
+
 ### This fork uses gi.repository.Notify intstead of subprocess to call libnotify.
 
 I'm sure it was fine, but the last thing I want is having to worry about making subprocess calls from untrusted sources. I've only tested this with Mako handling messages.
